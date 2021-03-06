@@ -1,14 +1,19 @@
 <template>
   <nav>
     <v-toolbar flat app>
-        <v-tollbar-title class="text-uppercase grey--text">
+        <v-btn fab flat depresed @click="drawer = !drawer"> 
+            <v-icon>
+                mdi-menu
+            </v-icon>
+        </v-btn>
+        <v-toolbar-title class="text-uppercase grey--text">
             <span class="font-weight-light">
                 Todo
             </span>
             <span>
             vue app
             </span>
-        </v-tollbar-title>
+        </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-btn flat >
             <span>
@@ -17,11 +22,24 @@
             </span>
         </v-btn>
     </v-toolbar>
+
+
+    <!-- проп temporary нужен для оверлея -->
+    <v-navigation-drawer v-model="drawer" absolute temporary class="indigo">
+        <p>test</p>
+    </v-navigation-drawer>
+
   </nav>
 </template>
 
 <script>
-export default {};
+export default {
+    data() {
+        return {
+            drawer: false
+        }
+    },
+};
 </script>
 
 <style>
