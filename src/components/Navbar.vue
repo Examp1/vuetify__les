@@ -1,7 +1,7 @@
 <template>
   <nav>
     <v-toolbar flat app>
-        <v-btn fab flat depresed @click="drawer = !drawer"> 
+        <v-btn depressed flat depresed @click="drawer = !drawer"> 
             <v-icon>
                 mdi-menu
             </v-icon>
@@ -25,7 +25,7 @@
 
 
     <!-- проп temporary нужен для оверлея -->
-    <v-navigation-drawer v-model="drawer" absolute temporary class="primary">
+    <v-navigation-drawer v-model="drawer" app temporary class="primary">
         <v-list>
             <v-list-item v-for="(link, index) in links" :key="index" router :to="link.route">
                 <v-list-item-action>
