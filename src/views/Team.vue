@@ -1,6 +1,13 @@
 <template>
   <div class="team">
-      <h1>this is team page</h1>
+      <h1 class="subheading grey--text">this is team page</h1>
+
+      <v-container class="my-2">
+        <v-row>
+          <p>content</p>
+        </v-row>
+      </v-container>
+
   </div>
 </template>
 
